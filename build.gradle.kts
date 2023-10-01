@@ -1,15 +1,29 @@
 plugins {
     java
-    id("io.izzel.taboolib") version "1.42"
-    id("org.jetbrains.kotlin.jvm") version "1.5.31"
+    id("io.izzel.taboolib") version "1.56"
+    id("org.jetbrains.kotlin.jvm") version "1.7.20"
 }
 
 taboolib {
     install("common")
+    install("common-5")
+    install("module-chat")
+    install("module-lang")
+    install("module-metrics")
+    install("module-configuration")
+    install("expansion-command-helper")
     install("platform-bukkit")
     classifier = null
-    version = "6.0.9-114"
+    version = "6.0.12-13"
+
+    description {
+        contributors {
+            name("Yunmoa")
+        }
+        desc("A Bukkit Pathfinder Plugin for TabooLib")
+    }
 }
+
 
 repositories {
     mavenCentral()

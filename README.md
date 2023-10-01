@@ -1,4 +1,4 @@
-# Building
+# ColdPathfinder
 
 * [Gradle](https://gradle.org/) - Dependency Management
 

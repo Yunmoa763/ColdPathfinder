@@ -2,7 +2,6 @@ package me.yunmoa.coldplugin.pathfinder.util
 
 import me.yunmoa.coldplugin.pathfinder.internal.manager.ConfigManager
 import taboolib.common.platform.function.console
-import taboolib.common.platform.function.isPrimaryThread
 import taboolib.common5.Coerce
 import taboolib.module.lang.sendLang
 
@@ -27,5 +26,4 @@ object BasicUtils {
     fun timing(start: Long): Double {
         return Coerce.format((System.nanoTime() - start).div(1000000.0))
     }
-
 }

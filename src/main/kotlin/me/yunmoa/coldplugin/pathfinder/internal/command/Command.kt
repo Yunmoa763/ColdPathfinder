@@ -8,7 +8,6 @@ import taboolib.common.platform.command.mainCommand
 import taboolib.common.platform.command.subCommand
 import taboolib.common.platform.function.submit
 import taboolib.expansion.createHelper
-import taboolib.platform.BukkitAdapter
 
 /**
  * ColdPathfinder
@@ -17,15 +16,16 @@ import taboolib.platform.BukkitAdapter
  * @author Yunmoa
  * @since 2023/10/1 15:37
  */
-@CommandHeader(name = "ColdPathfinder", aliases = ["cpf"])
+@CommandHeader(
+    name = "ColdPathfinder",
+    aliases = ["cpf"],
+    description = "ColdPathfinder Main Command")
 object Command {
+    @CommandBody
+    val main = mainCommand { createHelper() }
 
     @CommandBody
-    val main = mainCommand {
-        execute<CommandSender> { _, _, _ ->
-            createHelper()
-        }
-    }
+    val help = subCommand { createHelper() }
 
     @CommandBody
     val reload = subCommand {
